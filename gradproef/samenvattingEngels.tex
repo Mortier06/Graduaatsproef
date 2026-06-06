@@ -1,0 +1,33 @@
+
+%%=============================================================================
+%% Samenvatting engels
+%%=============================================================================
+\chapter*{Samenvatting English}
+
+In my second and final year of the Programming course at HOGENT, 
+I had to complete a graduation project. This had to be a project in 
+collaboration with my internship company. Together with Victor Buyck 
+Steel Construction, a steel construction company in Eeklo, we decided 
+to develop a reception application.
+
+The company was paying annually for an external SaaS solution to manage 
+their reception. The problem was that this solution regularly went down 
+and that the annual cost was high. Because of this, the decision was made 
+to develop their own solution.
+
+The result is WelcomeDesk, a reception application consisting of a 
+Blazor frontend and a C\#-backend. Visitors can check in by filling in 
+their details and selecting an employee. That employee is then automatically 
+notified via a Teams message, an SMS and an email.
+
+Blazor was chosen for the development because the company was already 
+familiar with it and actively uses it in other internal projects. An 
+additional advantage of Blazor WebAssembly is that the application can 
+run as a standalone app in the browser without needing a constant server 
+connection. This makes the application more stable and easier to deploy 
+on a device at the reception. The data is stored in a MySQL database. 
+The Teams notifications are handled via Power Automate, the SMS via Proximus.
+
+WelcomeDesk is a working replacement for the old paid solution. 
+The licence cost is eliminated, the system is more stable and it can 
+easily be extended in the future if needed.
