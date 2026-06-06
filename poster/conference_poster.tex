@@ -13,17 +13,16 @@
 \institution{Hogeschool Gent, Valentin Vaerwyckweg 1, 9000 Gent}
 
 % Info over de bachelorproef
-\title{Titel van je graduaatsproef}
+\title{WelcomeDesk}
 \subtitle{Ondertitel (eventueel)}
-\author{Voornaam Naam}
-\email{voornaam.familienaam@student.hogent.be}
-\supervisor{Voornaam Naam}
-\cosupervisor{Voornaam Naam (Bedrijf)}
+\author{Mortier Thibaud}
+\email{thibaud.mortier@student.hogent.be}
+\supervisor{Dimitri Vanhaecke}
 
 % Indien ingevuld, wordt deze informatie toegevoegd aan het einde van de
 % abstract. Zet in commentaar als je dit niet wilt.
 \specialisation{Programmeren}
-\keywords{Lambda-calculus, Scheme}
+\keywords{onthaalautomatisering}
 \projectrepo{https://github.com/user/repo}
 
 \begin{document}
@@ -31,34 +30,25 @@
 \maketitle
 
 \begin{abstract}
-It's only a model.
-You don't vote for kings. Who's that then? We found them. Ni! Ni! Ni! Ni!
-The nose? On second thoughts, let's not go there. It is a silly place. Bloody Peasant! And the hat. She's a witch! Where'd you get the coconuts?
+Victor Buyck Steel Construction in Eeklo gebruikte een betalende SaaS-oplossing voor hun onthaal, die regelmatig uitviel en hoge licentiekosten met zich meebracht. WelcomeDesk is een op maat ontwikkelde vervanger, bestaande uit een Blazor-frontend en een C\#-backend, waarbij bezoekers zich kunnen aanmelden en een medewerker selecteren die vervolgens automatisch verwittigd wordt via Teams, sms en e-mail. Dit elimineert de externe licentiekost en verhoogt de betrouwbaarheid van het systeem.
 \end{abstract}
 
 \begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
 
 \section{Introductie}
 
-Be quiet! Found them? In Mercia?! The coconut's tropical! But you are dressed as one… Well, what do you want? Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.
+Bedrijven ontvangen dagelijks bezoekers en hebben nood aan een gestructureerd en efficiënt onthaalproces. Victor Buyck Steel Construction, een staalbouwbedrijf gevestigd in Eeklo, maakte hiervoor gebruik van een externe SaaS-oplossing waarvoor jaarlijks een licentiekost betaald werd. Deze oplossing bleek echter niet betrouwbaar: het systeem viel regelmatig uit en bood weinig flexibiliteit voor toekomstige uitbreidingen.
+Dit heeft geleid tot de vraag of een intern ontwikkelde applicatie een volwaardig en kostenefficiënter alternatief kan bieden. Het resultaat van dit project is WelcomeDesk, een op maat gemaakte onthaalapplicatie die het bezoekersproces automatiseert en medewerkers via meerdere kanalen verwittigt.
 
-Well, what do you want? It's only a model. Camelot! We found them. We shall say `Ni' again to you, if you do not appease us.
 
-The nose? Shut up! Burn her! I am your king. You don't vote for kings.
+\section{Ontwikkeling}
 
-You can't expect to wield supreme power just `cause some watery tart threw a sword at you! Well, we did do the nose. I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
+Voor de ontwikkeling van WelcomeDesk werd gekozen voor Blazor als frontend-framework, gecombineerd met een C\#-backend. Deze keuze was voor de hand liggend aangezien Victor Buyck Steel Construction reeds ervaring heeft met het .NET-ecosysteem en Blazor actief inzet in andere interne projecten. De gegevens van de applicatie worden opgeslagen in een MySQL-database.
 
-Why do you think that she is a witch? We want a shrubbery!! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
+Bezoekers melden zich aan door hun gegevens manueel in te vullen in de applicatie. Vervolgens selecteren ze de medewerker die ze wensen te bezoeken, waarna het notificatiesysteem automatisch in werking treedt.
 
-\section{Experimenten}
+De notificaties worden verstuurd via drie kanalen. Voor Microsoft Teams werd gebruik gemaakt van Power Automate, waarmee een geautomatiseerde flow triggered wordt bij een nieuwe aanmelding. De sms-notificaties verlopen via Proximus, wat de facturering vereenvoudigt aangezien het bedrijf reeds klant is bij deze provider. E-mailnotificaties worden eveneens automatisch verstuurd bij elke nieuwe bezoekersregistratie.
 
-A newt? Camelot! Why? No, no, no! Yes, yes. A bit. But she's got a wart.
-
-Shut up! I dunno. Must be a king. Who's that then? Look, my liege! On second thoughts, let's not go there. It is a silly place.
-
-Shut up! Will you shut up?! No, no, no! Yes, yes. A bit. But she's got a wart. He hasn't got shit all over him. It's only a model. It's only a model.
-
-Bring her forward! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave 
 
 \section{Sectie met figuur}
 
@@ -74,7 +64,7 @@ Let er wel op dat dit tot problemen met bladschikking kan leiden.
 
 \section{Conclusies}
 
-Don't underestimate the Force. Oh God, my uncle. How am I ever gonna explain this? I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force.
+WelcomeDesk toont aan dat een intern ontwikkelde onthaalapplicatie een volwaardig alternatief is voor een betalende SaaS-oplossing. De applicatie elimineert de jaarlijkse licentiekost en biedt een hogere beschikbaarheid dan de vroegere oplossing. Daarnaast geeft de zelfgebouwde aanpak Victor Buyck Steel Construction volledige controle over het systeem, waardoor toekomstige uitbreidingen eenvoudig door te voeren zijn zonder afhankelijk te zijn van een externe leverancier.
 
 \section{Toekomstig onderzoek}
 
