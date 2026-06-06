@@ -1,0 +1,40 @@
+%%=============================================================================
+%% Keuzes technologieën
+%%=============================================================================
+\chapter{Keuzes technologieën}
+
+\section{Blazor WebAssembly}
+
+Voor de frontend werd gekozen voor Blazor WebAssembly. Dit is een framework 
+van Microsoft waarmee je webapplicaties kan bouwen met C\# in plaats van 
+JavaScript. Omdat Victor Buyck Steel Construction al ervaring heeft met het 
+.NET-ecosysteem was dit een logische keuze.
+\bigskip
+Blazor WebAssembly draait volledig in de browser via WebAssembly, zonder 
+dat er een constante serververbinding nodig is. De applicatie wordt één 
+keer gedownload en kan daarna lokaal uitgevoerd worden. Dit is ideaal voor 
+een onthaaltoestel dat de hele dag moet blijven werken.
+
+\section{C\# en .NET}
+
+De backend is geschreven in C\# en draait als een REST API. C\# werd gekozen 
+omdat het aansluit bij de bestaande kennis binnen het bedrijf en goed 
+integreert met Blazor. De frontend communiceert met de backend via HTTP-calls 
+naar de API.
+
+\section{MySQL en Entity Framework}
+
+Voor de database werd gekozen voor MySQL. De data wordt beheerd via Entity 
+Framework met de code-first aanpak. Dit betekent dat de databasestructuur 
+wordt gegenereerd vanuit C\#-klassen, zonder dat er manueel SQL geschreven 
+moet worden. Wijzigingen aan de database worden bijgehouden via migrations.
+
+\section{Projectstructuur}
+
+Het project is opgesplitst in vier aparte onderdelen. De \textbf{frontend} 
+is het Blazor WebAssembly project dat de gebruikersinterface bevat. De 
+\textbf{API} is de backend die de logica verwerkt en communiceert met de 
+database. Het \textbf{DB}-project bevat de Entity Framework configuratie 
+en de migrations. Ten slotte bevat het \textbf{DBEntities}-project de 
+C\#-klassen die de databasetabellen voorstellen en die gedeeld worden 
+tussen de API en het DB-project.
